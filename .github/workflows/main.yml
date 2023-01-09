@@ -16,4 +16,4 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_KEY }}
           src: ./**
-          dist: /var/www/html
+          dist: /usr/local/release
