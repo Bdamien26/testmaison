@@ -3,14 +3,18 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Connect to server
-      uses: actions/ssh-remote@v0.1.0
-      with:
-        host: 192.168.1.21
-        username: myuser
-        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        script: |
-          sudo mkdir /home/test/reussi
+      runs-on: ubuntu-latest
+      steps:
+      - uses: actions/checkout@v2
+      - name: scp ssh pipelines
+        uses: cross-the-world/ssh-scp-ssh-pipelines@latest
+        env:
+          LASTSSH: "Doing something after copying"
+        with:
+            host: ${{ secrets.DC_HOST }}
+            user: ${{ secrets.DC_USER }}
+            pass: ${{ secrets.DC_PASS }}
+            scp: |
+              ./test/test1* => /home/github/test/test1/
+              ./test/test*.csv => "/home/github/test/test2/"
+          
