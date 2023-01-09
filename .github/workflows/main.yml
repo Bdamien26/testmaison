@@ -15,6 +15,5 @@ jobs:
             user: ${{ secrets.DC_USER }}
             pass: ${{ secrets.DC_PASS }}
             scp: |
-              ./test/test1* => /home/github/test/test1/
-              ./test/test*.csv => "/home/github/test/test2/"
+              './test/*' => /home/test/test1
           
