@@ -46,5 +46,5 @@ jobs:
                     F4x9VPr6FxRPD+v+AWPQYIDfV6mEmm7Me4n8WwQ0d1oU6npcpQlpNyAsagj1yBUmiI4h/v
                     LYgAID3Oewa3f8nOJ8PBRW1Ee1OXmyAWGXFGXs6izyV5wVkatPLQUEyerjt31tvT2ev9vy
                     oE0ptfTztoYzW9mQAAAAt0ZXN0QGRlYmlhbgECAwQFBg==
-      - run: ssh ${{ steps.ssh.outputs.SERVER }} pwd
+      
           
