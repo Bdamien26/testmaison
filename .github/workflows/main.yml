@@ -14,6 +14,6 @@ jobs:
         with:
           host: ${{ secrets.SERVER_HOST }}
           user: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_KEY }}
+          pass: ${{ secrets.SERVER_PASS }}
           src: ./**
-          dist: /usr/local/release
+          dist: /var/www/html
