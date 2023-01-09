@@ -7,7 +7,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Connect to server
-      uses: Meijer/ssh-action@master
+      uses: actions/ssh-remote@v0.1.0
       with:
         host: 192.168.1.21
         username: myuser
