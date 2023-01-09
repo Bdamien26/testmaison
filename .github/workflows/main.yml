@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run sshpass-scp commands
-        uses: youxingz/sshpass-scp-action@v3
+        uses: matheusvanzan/sshpass-action@v1
         with:
           host: ${{ secrets.SERVER_HOST }}
           user: ${{ secrets.SERVER_USER }}
