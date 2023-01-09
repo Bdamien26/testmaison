@@ -15,5 +15,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           user: ${{ secrets.SERVER_USER }}
           pass: ${{ secrets.SERVER_PASS }}
+          port : 22
           src: ./**
           dist: /usr/local/release
