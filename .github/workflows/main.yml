@@ -11,9 +11,9 @@ jobs:
         env:
           LASTSSH: "Doing something after copying"
         with:
-            host: ${{ secrets.DC_HOST }}
-            user: ${{ secrets.DC_USER }}
-            pass: ${{ secrets.DC_PASS }}
+            host: 192.168.1.21
+            user: test
+            pass: azerty
             scp: |
               './test/*' => /home/test/test1
           
