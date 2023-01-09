@@ -4,47 +4,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - id: ssh
-        uses: invi5H/ssh-action@v1
-        with:
-          SSH_HOST: 192.168.1.21
-          SSH_PORT: 22
-          SSH_USER: test
-          SSH_KEY: b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
-                    NhAAAAAwEAAQAAAYEAxAJhPHpfw86X2Ipq3wEecRSFDbh+FA5hTBWK9s/NHuLbq5pdQYl5
-                    AhMgIOmZlZWxbDuHyQRXd/j9auAyfq8fEX1BUZ9A+RXqnpg0KG4koTrGOYjrLTVVqCYf6N
-                    4D0bKP8MVKUGS17etmm3Q6Ot4VF5+0Aga+qJ2g6haC6dBTMhXVtbztLgUf/82wQcYZ0shB
-                    cBBhPjDdBETprhzEbFfViBlghiHsY3Z+RW5PN+4ex9/q602+ulxhJKZKhRkaocy8oFI0Lr
-                    EklKopzlghfPRb3OpbZt3oZL7dhxjiFk7donnTFFYkCCqtnaYGGZMPY7bYlnCX78Chm3YZ
-                    j5DdTqMuoRxamhuI9kHSk051iISGnLRPOZx+X0n5m6oTv7RK74pXP3W3hsmwgKMtaFePDu
-                    Dnw8WqcFNQtm8ms7/IYTvl4ZxiI/J16uIiXAWCbxiju046SWxrRNpbFkhA1GdTwYUBC1Jk
-                    vXKXT+bP6ifEZYt92Y51fx/RBUO8pYy8cF50PlHbAAAFiBvdf3Ab3X9wAAAAB3NzaC1yc2
-                    EAAAGBAMQCYTx6X8POl9iKat8BHnEUhQ24fhQOYUwVivbPzR7i26uaXUGJeQITICDpmZWV
-                    sWw7h8kEV3f4/WrgMn6vHxF9QVGfQPkV6p6YNChuJKE6xjmI6y01VagmH+jeA9Gyj/DFSl
-                    Bkte3rZpt0OjreFReftAIGvqidoOoWgunQUzIV1bW87S4FH//NsEHGGdLIQXAQYT4w3QRE
-                    6a4cxGxX1YgZYIYh7GN2fkVuTzfuHsff6utNvrpcYSSmSoUZGqHMvKBSNC6xJJSqKc5YIX
-                    z0W9zqW2bd6GS+3YcY4hZO3aJ50xRWJAgqrZ2mBhmTD2O22JZwl+/AoZt2GY+Q3U6jLqEc
-                    WpobiPZB0pNOdYiEhpy0Tzmcfl9J+ZuqE7+0Su+KVz91t4bJsICjLWhXjw7g58PFqnBTUL
-                    ZvJrO/yGE75eGcYiPyderiIlwFgm8Yo7tOOklsa0TaWxZIQNRnU8GFAQtSZL1yl0/mz+on
-                    xGWLfdmOdX8f0QVDvKWMvHBedD5R2wAAAAMBAAEAAAGBAJEywh0u+envDIUYZHq2NXrHHJ
-                    lBZgQtct4Nx1d2MBkFLH0+aH63+7ARwucepOsubLQklT3PvYveIrwdQMqfp4ApLU3tjw/1
-                    sEuzrE+W6AOXqmfMiYp/y+g39cNnU6TvhblyLM7JDAwnKWdW/hvFkBJj99DYdjwqKJ2/91
-                    KFRFwB2MI8JebFXSL9l+fhfBesyOze9WpAgDk9Y23bWZZ4qnGbeuliD97OVFPSl1RzTNH7
-                    ieatPPCIpl2j4ege5J+fLX8cSjVXHHDsW6kHPUTJnPdBcAVJvO+h1iG3h+YiSeIrG0hPpf
-                    2A38AsVzb6u+S2WpBg3Y0ZBDHHr1tWMYtGkRiM8JuItTxhUECfb7ElM1tXxhBHqgEFuBAY
-                    MR8Fzpg4oFsGMkMe41TE98q//dg26GG14NzElZ96bdKhY+2q2AqyXlxiYg+OdwA0R/nK4e
-                    fDP8/FY7p2gpH21SfFh77YfDugMykwKCRN8tt8HRm+1eYdoy90tkT33KJcZfkYDZUAwQAA
-                    AMEAzclpoRcQb/yARjFqbSZxHLFnqz4BR+PQjlpNVvezJEP7tLEtIJbwTWV4SXPsOpJeaq
-                    DanH/f4u2WNfYAVyttka+CEu6ehRAsk7fLMDgGnVQsnNzsYdirAQobUMyiVhxCsrfjkx6K
-                    JA1PhxgZP7+mfgV1n19QT8hhpDS2Q9bQZZd/HKkPEub89BARGII0sqCt/lTLCc5vkxwe9h
-                    ScO5D1609G+UnzXsAYUsXYsck1NwGCqQOic9dVnZyFIhr+vA2qAAAAwQDyZUDq5u2KXqaY
-                    eAO2MASjFINbtO4gi/72Q83VFyyJW/TAdl7c3D4V659F4TEN5tWSjplMvGdc6LSWGBNus9
-                    7qL6KUu/KRll2xEXchF326BmVLXKHQavFlml78tePZpXqPGEWE3cbIG+pcqO7+hurRHdNI
-                    3b+P1fITRFUHqQzMD/9QnwxpWIyof1hFOHOkgNSdW3KnUdNX3jXSZhRf6N1xWZVQ4OTvOh
-                    trFmytFTGl/Ik9VEgukjM9fXiRYMJv65MAAADBAM8CpcMjvk5w0ngHBRkY1AE11v7lYqrM
-                    moClRmIGps1z2uSC3ddinVZvNcTw21JnoPEM2DIjCXFNNDFRERNLZj77WdchsqwuWnyduP
-                    F4x9VPr6FxRPD+v+AWPQYIDfV6mEmm7Me4n8WwQ0d1oU6npcpQlpNyAsagj1yBUmiI4h/v
-                    LYgAID3Oewa3f8nOJ8PBRW1Ee1OXmyAWGXFGXs6izyV5wVkatPLQUEyerjt31tvT2ev9vy
-                    oE0ptfTztoYzW9mQAAAAt0ZXN0QGRlYmlhbgECAwQFBg==
-      
-          
+    - name: Install SSH key
+      uses: shimataro/ssh-key-action@v2
+      with:
+        key: ${{ secrets.SSH_KEY }}
+        name: id_rsa # optional
+        known_hosts: |
+          192.168.1.21 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAmE8el/DzpfYimrfAR5xFIUNuH4UDmFMFYr2z80e4turml1BiXkCEyAg6ZmVlbFsO4fJBFd3+P1q4DJ+rx8RfUFRn0D5FeqemDQobiShOsY5iOstNVWoJh/o3gPRso/wxUpQZLXt62abdDo63hUXn7QCBr6onaDqFoLp0FMyFdW1vO0uBR//zbBBxhnSyEFwEGE+MN0EROmuHMRsV9WIGWCGIexjdn5Fbk837h7H3+rrTb66XGEkpkqFGRqhzLygUjQusSSUqinOWCF89Fvc6ltm3ehkvt2HGOIWTt2iedMUViQIKq2dpgYZkw9jttiWcJfvwKGbdhmPkN1Ooy6hHFqaG4j2QdKTTnWIhIactE85nH5fSfmbqhO/tErvilc/dbeGybCAoy1oV48O4OfDxapwU1C2byazv8hhO+XhnGIj8nXq4iJcBYJvGKO7TjpJbGtE2lsWSEDUZ1PBhQELUmS9cpdP5s/qJ8Rli33ZjnV/H9EFQ7yljLxwXnQ+Uds= test@debian
+        if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+    - name: rsync over SSH
+      run: rsync -r ./test test@192.168.1.21
