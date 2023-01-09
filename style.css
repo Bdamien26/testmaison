@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+/*NAV*/
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins',sans-serif;
+
+}
+
+body
+{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+
+}
+
+
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding: 10px 90px;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0,0.5);
+    border-bottom: 1px solid #fff;
+}
+nav .logo{
+    padding: 22px 20px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+nav ul{
+    list-style: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li a{
+    line-height: 80px;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+nav ul li:hover{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 6px;
+}
+/*FIN NAV*/
+/*debut CV*/
+
+.containerr
+{
+    
+	width: 100%;
+	max-width: 1000px;
+	min-height: 1000px;
+	background: #fff;
+	margin: 50px;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+    box-shadow: 0 40px 55 px rgba(0, 0, 0, 0.1);
+}
+.containerr .lef_side
+{
+	
+	background: #003147;
+	padding: 40px;
+}
+.profileText
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-bottom: 20px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.profileText .imgBx
+{
+	position:relative;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.profileText .imgBx img
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.profileText h2
+{
+	color: #fff;
+	font-size: 1.5em;
+	margin-top: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	outline-width: 1.4em;
+}
+
+.profileText h2 span 
+{
+	font-size: 0.8em;
+	font-weight: 300;
+}
+.contactInfo
+{
+	padding-top:30px ;
+}
+
+.titre
+{
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.contactInfo ul
+{
+	position: relative;
+}
+
+.contactInfo ul li
+{
+	position: relative;
+	list-style: none;
+}
+
+.contactInfo ul li .icon
+{
+	display: inline-block;
+	width: 30px;
+	font-size: 20px;
+	color: #03a9f4;
+} 
+
+.contactInfo ul li span
+{
+	color: #fff;
+	font-weight: 300;
+}
+
+
+.contactInfo.education li
+{
+  margin-bottom: 15px;
+}
+
+
+.contactInfo.education h5
+{
+	color: #03a9f4;
+	font-weight: 500;
+	font-size: 1.5em;
+}
+
+.contactInfo.education h4:nth-child(2)
+{
+	color: #fff;
+	font-weight: 500;
+	font-size: 1.5em;
+}
+
+.contactInfo.education h4
+{
+	color: #fff;
+	font-weight: 1.0;
+	font-size: 1em;
+}
+.contactInfo.langue .pourcent
+{
+	position: relative;
+	width: 100%;
+	height: 6px;
+	background: #081921;
+	display: block;
+	margin-top: 5px;
+}
+
+.contactInfo.langue .pourcent div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #3366FF;
+}
+
+
+.contactInfo.interet li 
+{
+	color: #fff;
+	font-weight: 500;
+}
+
+.containerr .right_side
+{
+	
+	background: #80D4FF;
+	padding: 40px;
+}
+
+.apropos
+{
+	margin-bottom: 50px;
+}
+.apropos:last-child
+{
+	margin-bottom: 0;
+}
+.titre2
+{
+	color: #003147;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 10px;
+}
+p
+{
+	color: #333;
+	font-size: 1.2em;
+}
+
+.apropos .box
+{
+	display: flex;
+	flex-direction: row;
+	margin: 20px 0;
+}
+
+.apropos .box .année_entreprise
+{
+	min-width: 150px;
+}
+
+
+.apropos .box .année_entreprise h5
+{
+	text-transform: uppercase;
+	color: #525759;
+	font-weight: 600;
+}
+
+.apropos .box .text h4
+{
+	text-transform: uppercase;
+	color: #2a72da;
+	font-size: 16px;
+}
+.skills .box
+{
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 150px 1fr;
+	justify-content: center;
+	align-items: center;
+}
+.skills .box h4
+{
+	text-transform: uppercase;
+	color: #525759;
+	font-weight: 300;
+	font-size: 1.2em;
+}
+.skills .box .pourcent
+{
+	position: relative;
+	width: 100%;
+	height: 10px;
+	background: #f0f0f0;
+}
+
+.skills .box .pourcent div
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background: #03a9f4;
+}
+
+.interet ul
+{
+	display: grid;
+	grid-template-columns: 4,1fr;
+}
+
+.interet ul li 
+{
+	list-style: none;
+	color: #333;
+	font-weight: 500;
+	margin: 10px 0;
+}
+.interet ul li .fa
+{
+	color: #03a9f4;
+	font-size: 18px;
+	width: 20px;
+}
+/*Fin CV*/
+/*Home*/
+
+section.photoo{
+    width: 100%;
+    height: 100vh;
+    background: url(infoo.jpeg.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.ecriture h1{
+left: 100
+}
+/*fin Home*/
+
+/*Partie Contact*/
+section.photo{
+    width: 100%;
+    height: 100vh;
+    background: url(telephone.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.contact
+{
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo
+{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon
+{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+/*Partie Contact*/
+@media screnn and (max-width: 900px)
