@@ -16,4 +16,4 @@ jobs:
           user: ${{ secrets.SERVER_USER }}
           pass: ${{ secrets.SERVER_PASS }}
           src: ./**
-          dist: /var/www/html
+          dist: /usr/local/release
