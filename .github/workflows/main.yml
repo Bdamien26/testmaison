@@ -8,15 +8,12 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Deploy to Staging server
-        uses: easingthemes/ssh-deploy@main
-    env:
-      SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      ARGS: "-rlgoDzvc -i"
-      SOURCE: "dist/"
-      REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-      REMOTE_USER: ${{ secrets.REMOTE_USER }}
-      TARGET: /home/test/
-      EXCLUDE: "/dist/, /node_modules/"
-      
+      - uses: actions/checkout@v2
+      - name: Run sshpass-scp commands
+        uses: youxingz/sshpass-scp-action@v3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          user: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_KEY }}
+          src: ./**
+          dist: /var/www/html
