@@ -11,5 +11,6 @@ jobs:
         known_hosts: ssh-keyscan 192.168.1.21 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEAmE8el/DzpfYimrfAR5xFIUNuH4UDmFMFYr2z80e4turml1BiXkCEyAg6ZmVlbFsO4fJBFd3+P1q4DJ+rx8RfUFRn0D5FeqemDQobiShOsY5iOstNVWoJh/o3gPRso/wxUpQZLXt62abdDo63hUXn7QCBr6onaDqFoLp0FMyFdW1vO0uBR//zbBBxhnSyEFwEGE+MN0EROmuHMRsV9WIGWCGIexjdn5Fbk837h7H3+rrTb66XGEkpkqFGRqhzLygUjQusSSUqinOWCF89Fvc6ltm3ehkvt2HGOIWTt2iedMUViQIKq2dpgYZkw9jttiWcJfvwKGbdhmPkN1Ooy6hHFqaG4j2QdKTTnWIhIactE85nH5fSfmbqhO/tErvilc/dbeGybCAoy1oV48O4OfDxapwU1C2byazv8hhO+XhnGIj8nXq4iJcBYJvGKO7TjpJbGtE2lsWSEDUZ1PBhQELUmS9cpdP5s/qJ8Rli33ZjnV/H9EFQ7yljLxwXnQ+Uds= test@debian
     - name: Copie des fichier
       run: rsync -r C:\Users\damie\Documents\test test@192.168.1.21:/var/www/html
+    
 
     
