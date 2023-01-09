@@ -1,20 +1,16 @@
 name: deploy
-on:
-  push:
-    branches:
-      - main
-      - master
+on: [push]
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run sshpass-scp commands
-        uses: matheusvanzan/sshpass-action@v1
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          user: ${{ secrets.SERVER_USER }}
-          pass: ${{ secrets.SERVER_PASS }}
-          port : 22
-          src: ./**
-          dist: /usr/local/release
+    - uses: actions/checkout@v2
+    - name: Connect to server
+      uses: adr Meijer/ssh-action@master
+      with:
+        host: 192.168.1.21
+        username: myuser
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          sudo mkdir /home/test/reussi
